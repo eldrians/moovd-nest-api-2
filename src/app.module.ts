@@ -3,8 +3,6 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule, ConfigService } from '@nestjs/config';
-import { TodosModule } from './todos/todos.module';
-import { Todo } from './todos/todos.entity';
 import { join } from 'path';
 import { GpsModule } from './gps/gps.module';
 
@@ -27,7 +25,6 @@ import { GpsModule } from './gps/gps.module';
       inject: [ConfigService],
     }),
 
-    TodosModule,
     GpsModule,
   ],
   controllers: [AppController],
