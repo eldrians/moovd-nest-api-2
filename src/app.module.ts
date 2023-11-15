@@ -5,6 +5,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { join } from 'path';
 import { GpsModule } from './gps/gps.module';
+import { UserModule } from './user/user.module';
 
 @Module({
   imports: [
@@ -26,6 +27,7 @@ import { GpsModule } from './gps/gps.module';
     }),
 
     GpsModule,
+    UserModule,
   ],
   controllers: [AppController],
   providers: [AppService],
