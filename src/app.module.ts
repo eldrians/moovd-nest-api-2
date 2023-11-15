@@ -3,6 +3,10 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule, ConfigService } from '@nestjs/config';
+import { TodosModule } from './todos/todos.module';
+import { Todo } from './todos/todos.entity';
+import { join } from 'path';
+import { GpsModule } from './gps/gps.module';
 
 @Module({
   imports: [
@@ -17,11 +21,14 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
         username: configService.get('DB_USERNAME'),
         password: configService.get('DB_PASSWORD'),
         database: configService.get('DB_DATABASE'),
-        entities: [],
+        entities: [join(process.cwd(), 'dist/**/*.entity.js')],
         synchronize: true,
       }),
       inject: [ConfigService],
     }),
+
+    TodosModule,
+    GpsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
