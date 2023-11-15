@@ -6,16 +6,22 @@ created with NestJS and MySQL
 
 ## API Reference
 
+#### baseUrl
+
+```http
+  GET 
+```
+
 #### Get all GPS
 
 ```http
-  GET http://localhost:3001/gps
+  GET /gps
 ```
 
 #### Get GPS by device id
 
 ```http
-  GET http://localhost:3001/gps/${device_id}
+  GET /gps/${device_id}
 ```
 
 | Parameter | Type     |
@@ -26,7 +32,7 @@ created with NestJS and MySQL
 #### Add GPS
 
 ```http
-  POST http://localhost:3001/gps
+  POST /gps
 ```
 
 | json | Type     |
@@ -39,7 +45,7 @@ created with NestJS and MySQL
 #### Edit GPS
 
 ```http
-  PUT http://localhost:3001/gps
+  PUT /gps
 ```
 
 | json | Type     |
@@ -52,7 +58,7 @@ created with NestJS and MySQL
 #### Delete GPS by device id
 
 ```http
-  DELETE http://localhost:3001/gps/${device_id}
+  DELETE /gps/${device_id}
 ```
 
 | Parameter | Type     |
@@ -62,13 +68,13 @@ created with NestJS and MySQL
 #### Get all user
 
 ```http
-  GET http://localhost:3001/user
+  GET /user
 ```
 
 #### Get user by email
 
 ```http
-  GET http://localhost:3001/user/${email}
+  GET /user/${email}
 ```
 
 | Parameter | Type     |
@@ -79,7 +85,7 @@ created with NestJS and MySQL
 #### Add User
 
 ```http
-  POST http://localhost:3001/user
+  POST /user
 ```
 
 | json | Type     |
@@ -92,7 +98,7 @@ created with NestJS and MySQL
 #### Edit User
 
 ```http
-  PUT http://localhost:3001/user
+  PUT /user
 ```
 
 | json | Type     |
@@ -105,7 +111,7 @@ created with NestJS and MySQL
 #### Delete user by id
 
 ```http
-  DELETE http://localhost:3001/user/${id}
+  DELETE /user/${id}
 ```
 
 | Parameter | Type     |
