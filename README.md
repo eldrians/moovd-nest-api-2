@@ -8,19 +8,19 @@ created with NestJS and MySQL
 
 #### baseUrl
 
-```http
-  GET 
+```
+  GET http://localhost:3001
 ```
 
 #### Get all GPS
 
-```http
+```
   GET /gps
 ```
 
 #### Get GPS by device id
 
-```http
+```
   GET /gps/${device_id}
 ```
 
@@ -31,7 +31,7 @@ created with NestJS and MySQL
 
 #### Add GPS
 
-```http
+```
   POST /gps
 ```
 
@@ -44,7 +44,7 @@ created with NestJS and MySQL
 
 #### Edit GPS
 
-```http
+```
   PUT /gps
 ```
 
@@ -57,7 +57,7 @@ created with NestJS and MySQL
 
 #### Delete GPS by device id
 
-```http
+```
   DELETE /gps/${device_id}
 ```
 
@@ -67,13 +67,13 @@ created with NestJS and MySQL
 
 #### Get all user
 
-```http
+```
   GET /user
 ```
 
 #### Get user by email
 
-```http
+```
   GET /user/${email}
 ```
 
@@ -84,7 +84,7 @@ created with NestJS and MySQL
 
 #### Add User
 
-```http
+```
   POST /user
 ```
 
@@ -97,7 +97,7 @@ created with NestJS and MySQL
 
 #### Edit User
 
-```http
+```
   PUT /user
 ```
 
@@ -110,7 +110,7 @@ created with NestJS and MySQL
 
 #### Delete user by id
 
-```http
+```
   DELETE /user/${id}
 ```
 
